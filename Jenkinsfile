@@ -12,15 +12,17 @@ pipeline {
         stage('Build') {
             steps {
                 // Install dependencies and build the React application
-                sh 'npm install'
-                sh 'npm run build'
+                // Use 'bat' command for Windows shell commands
+                bat 'npm install'
+                bat 'npm run build'
             }
         }
 
         stage('Test') {
             steps {
                 // Run automated tests
-                sh 'npm run test -- --coverage'
+                // Use 'bat' command for Windows shell commands
+                bat 'npm run test -- --coverage'
             }
         }
     }
