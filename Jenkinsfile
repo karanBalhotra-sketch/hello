@@ -23,6 +23,7 @@ pipeline {
                 sh 'npm run test -- --coverage'
             }
         }
+    }
 
     post {
         always {
